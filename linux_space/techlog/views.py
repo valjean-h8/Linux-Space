@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Post
 
-
-def index(request):
-    return HttpResponse("Welcome to Linux-Space.")
+def post_list(request):
+    posts = Post.objects.all().order_by('-created_at')
+    return render(request, 'techlog/post_list.html', {'posts': posts})
