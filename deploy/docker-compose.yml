@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: linuxspace
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: ChrisNegus
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build:
+      context: ..
+      dockerfile: deploy/docker/Dockerfile.django
+    volumes:
+      - ../app:/app
+    env_file:
+      - ../.env
+    depends_on:
+      - db
+    expose:
+      - "8000"
+
+  nginx:
+    build:
+      context: ..
+      dockerfile: deploy/docker/Dockerfile.nginx
+    ports:
+      - "80:80"
+      # - "443:443"
+    volumes:
+      - ../app/staticfiles:/static
+      - ./nginx:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl
+      - ./logs:/var/log/nginx
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+
