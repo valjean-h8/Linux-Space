@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.pyc
+
+# Django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# Virtual environments
+venv/
+env/
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# Django secrets
+*.log
+*.pot
+*.pyc
+.DS_Store
+.env
+
+# Static/media (если генерируется)
+staticfiles/
+media/
+
+# PostgreSQL socket или дампы
+*.dump
+*.sql
+*.pgsql
+
+# Docker (если есть)
+*.pid
+*.tar
+*.gz
+
