@@ -33,7 +33,8 @@ Linux Space — это блог-платформа, вдохновлённая �
      alt="Preview"
      style="width:500px; border-radius:8px;"/>
 
-🚀 Алгоритм установки Linux Space
+## 🚀 Алгоритм установки Linux Space
+
 📦 1. Клонируй репозиторий
 ```bash
 git clone https://github.com/<твой-юзернейм>/linux-space.git
