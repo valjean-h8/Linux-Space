@@ -8,18 +8,19 @@
 </head>
 <body>
 
-  <h1>Linux Space Blog</h1>
+  <div class="container">
+  <h1>🐧 Linux Space Blog <span class="subtitle">— code, cold & clarity</span></h1>
 
-  {% for post in posts %}
-    <div>
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.created_at|date:"Y-m-d H:i" }}</p>
-      <p>{{ post.content|truncatewords:30 }}</p>
-      <hr>
-    </div>
-  {% empty %}
-    <p>Пока нет постов...</p>
-  {% endfor %}
+    {% for post in posts %}
+      <div class="card">
+        <h2>{{ post.title }}</h2>
+        <p class="meta">{{ post.created_at|date:"Y-m-d H:i" }}</p>
+        <p>{{ post.content|truncatewords:30 }}</p>
+      </div>
+    {% empty %}
+      <p class="empty">Пока нет постов…</p>
+    {% endfor %}
+  </div>
 
 </body>
 </html>
