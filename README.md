@@ -13,6 +13,20 @@ Linux Space — это блог-платформа, вдохновлённая �
 - PostgreSQL
 - Let's Encrypt + HTTPS
 
+## Структура проекта
+
+[ Браузер ]
+     │ https
+     ▼
+[ Nginx (контейнер) ]
+     │  proxy_pass
+     ▼
+[ Gunicorn + Django (контейнер) ]
+     │  ORM
+     ▼
+[ PostgreSQL (контейнер) ]
+
+
 <img src="https://github.com/user-attachments/assets/5baf77f8-eb5b-4635-b1a6-3ad85c2c6640"
      alt="Preview"
      style="width:500px; border-radius:8px;"/>
