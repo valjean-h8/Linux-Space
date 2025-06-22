@@ -1,41 +1,24 @@
-# Python
+# Секреты и ключи
+.env
+*.env
+*.key
+*.pem
+
+# БД
+*.sqlite3
+*.db
+*.sql
+
+# Кэш Django
 __pycache__/
 *.py[cod]
-*.sqlite3
 *.pyc
 
-# Django migrations
-**/migrations/
-!**/migrations/__init__.py
-
-# Virtual environments
-venv/
-../venv/
-.venv/
-
-
-# VSCode / PyCharm
-.vscode/
-.idea/
-
-# Django secrets
+# Логи и временные файлы
 *.log
-*.pot
-*.pyc
-.DS_Store
-.env
-
-# Static/media (если генерируется)
-staticfiles/
-media/
-
-# PostgreSQL socket или дампы
-*.dump
-*.sql
-*.pgsql
-
-# Docker (если есть)
 *.pid
-*.tar
-*.gz
+*.swp
+
+# Django-секреты
+config/settings/local.py
 

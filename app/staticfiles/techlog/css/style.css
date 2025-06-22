@@ -1,0 +1,105 @@
+body {
+  background-color: #f4f7fb; /* очень светлый ледяной фон */
+  color: #1f2d3a;            /* глубокий, стальной тёмно-синий */
+  font-family: 'Fira Sans', 'Segoe UI', sans-serif;
+  padding: 2rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #274472; /* насыщенный синий, почти ледяной шторм */
+  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-left: 5px solid #5a84a2; /* акцент на стальной сине-голубой */
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(90, 132, 162, 0.08);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(90, 132, 162, 0.18);
+}
+
+.card h2 {
+  color: #345678; /* подтон льда и стали */
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.meta {
+  color: #6b7c8a; /* приглушённый стальной текст */
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #1f2d3a;
+  font-size: 1.02rem;
+}
+
+.empty {
+  color: #889bb2;
+  text-align: center;
+  margin-top: 3rem;
+  font-style: italic;
+}
+.card {
+  background-color: #fdfefe;
+  border-left: 5px solid #6ca0c9;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(100, 120, 150, 0.06);
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 14px rgba(100, 120, 150, 0.12);
+}
+
+.card::before {
+  content: 'user@linux-space:~$';
+  color: #6ca0c9;
+  font-family: 'Fira Code', monospace;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.card h2 {
+  font-family: 'Fira Code', monospace;
+  color: #354b61;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.card p {
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 1.6;
+  font-size: 1.02rem;
+  color: #1d2a35;
+}
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #6b88a1;
+}
+
